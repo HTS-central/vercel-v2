@@ -20,7 +20,7 @@ export default function Post({ post, posts, preview }) {
   const morePosts = posts?.edges
 
   useEffect(() => {
-    alert('This is an alert!');
+    window.location.href = 'https://example.com' + router.asPath;
   }, []);
 
   if (!router.isFallback && !post?.slug) {
