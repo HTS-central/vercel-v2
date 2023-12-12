@@ -22,7 +22,7 @@ export default function Post({ post, posts, preview }) {
   useEffect(() => {
     window.location.href = 'https://example.com' + router.asPath;
   }, []);
-
+  
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />
   }
@@ -49,12 +49,7 @@ export default function Post({ post, posts, preview }) {
                 title={post.title}
                 coverImage={post.featuredImage}
               />
-              <PostBody content={post.content} />
-              <footer>
-                {post.tags.edges.length > 0 && <Tags tags={post.tags} />}
-              </footer>
             </article>
-
           </>
         )}
       </Container>
