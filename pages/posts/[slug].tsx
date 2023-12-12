@@ -44,6 +44,10 @@ export default function Post({ post, posts, preview }) {
                   property="og:image"
                   content={post.featuredImage?.node.sourceUrl}
                 />
+                 <meta
+                  property="og:title"
+                  content={`${post.title}`}
+                />
               </Head>
             </article>
           </>
