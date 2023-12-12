@@ -51,6 +51,16 @@ export default function Post({ post, posts, preview }) {
                   property="og:description"
                   content={`${post.slug}`}
                 />
+                 <meta
+                  property="og:type"
+                  content="article"
+                />
+
+                <meta
+                  property="og:url"
+                  content=  {process.browser ? window.location.href : '';} 
+                />
+                
               </Head>
             </article>
           </>
