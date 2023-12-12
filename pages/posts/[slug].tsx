@@ -49,7 +49,7 @@ export default function Post({ post, posts, preview }) {
                 /> 
                 <meta
                   property="og:description"
-                  content={`${post.slug}`}
+                  content={`${post.excerpt}`}
                 />
          <meta property="og:type" content="article" />
 
