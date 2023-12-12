@@ -45,10 +45,6 @@ export default function Post({ post, posts, preview }) {
                   content={post.featuredImage?.node.sourceUrl}
                 />
               </Head>
-              <PostHeader
-                title={post.title}
-                coverImage={post.featuredImage}
-              />
             </article>
           </>
         )}
