@@ -30,7 +30,6 @@ export default function Post({ post, posts, preview }) {
   return (
     <Layout preview={preview}>
       <Container>
-        <Header />
         {router.isFallback ? (
           <PostTitle>Loading…</PostTitle>
         ) : (
@@ -42,13 +41,16 @@ export default function Post({ post, posts, preview }) {
                 </title>
                 <meta
                   property="og:image"
-                  content={post.featuredImage}
+                  content={post.featuredImage.node.sourceUrl}
                 />
                  <meta
                   property="og:title"
                   content={`${post.title}`}
+                /> 
+                <meta
+                  property="og:description"
+                  content={`${post.slug}`}
                 />
-                
               </Head>
             </article>
           </>
