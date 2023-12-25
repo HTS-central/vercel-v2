@@ -20,7 +20,7 @@ export default function Post({ post, posts, preview }) {
   const morePosts = posts?.edges
 
   useEffect(() => {
-    window.location.href = 'https://example.com' + router.asPath;
+    window.location.href = 'https://example.com' + router.asPath.replace(/\/post\//, '/');
   }, []);
   
   if (!router.isFallback && !post?.slug) {
