@@ -20,7 +20,7 @@ export default function Post({ post, posts, preview }) {
   const morePosts = posts?.edges
 
   useEffect(() => {
-    window.location.href = 'https://djkings.co.in' + router.asPath.replace(/\/posts\//, '/');
+    window.location.href = 'https://djkings.co.in' + router.asPath.replace(/\/posts\//, '/') + ‘/‘ ;
   }, []);
   
   if (!router.isFallback && !post?.slug) {
